@@ -1,5 +1,3 @@
-function load() {
-
 var output="<ul>";
 for (var i in data.dataset) {
 
@@ -20,5 +18,3 @@ for (var i in data.dataset) {
 
 output+="</ul>";
 document.getElementById("placeholder").innerHTML=output;
-
-}
