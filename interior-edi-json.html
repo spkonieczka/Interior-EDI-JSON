@@ -1,109 +1,68 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html>
+<head>
+	<link href="interior-edi-json.css" rel="stylesheet" type="text/css">
 
-	<head>
-		<meta charset="utf-8"/>
-		<script type="text/javascript" src="data.json"></script>
-	</head>
-	
-	<body>
-		
-		<div id="placeholder" style="height:300px; background-color:gray"></div>
-	</body>
-	
+</head>
+<body>
+<div id="id01"></div>
+<div id="id02"></div>
+</body>
+
+
 	<script>
-	
-		var data = {"dataset":
-		[
-		{
-		 "@type": "dcat:Dataset", 
-		 "title": "U.S. Geological Survey bedrock geological studies in Glacier Bay National Park, southeastern Alaska", 
-		 "description": "Laypersonoriented summary of research to date and its major findings; important and useful", 
-		 "keyword": [
-		  "bedrock", 
-		  "geology", 
-		  "lithology"
-		 ], 
-		 "modified": "1991-01-01T00:00:00Z", 
-		 "publisher": {
-		  "@type": "org:Organization", 
-		  "name": "National Park Service"
-		 }, 
-		 "contactPoint": {
-		  "@type": "vcard:Contact", 
-		  "fn": "NPS IRMA Help", 
-		  "hasEmail": "mailto:IRMA@nps.gov"
-		 }, 
-		 "identifier": "0000616c-5ca4-42d9-aca4-cd07aba3adf5", 
-		 "accessLevel": "public", 
-		 "isPrivate": false, 
-		 "bureauCode": [
-		  "010:24"
-		 ], 
-		 "programCode": [
-		  "010:118", 
-		  "010:119"
-		 ], 
-		 "landingpage": "https://irma.nps.gov/App/Reference/Profile/128407", 
-		 "accesslevelcomment": "If a link exists, you may download the associated files. Otherwise, please contact the associated Point of Contact to determine the best means to access the information.", 
-		 "accesslevel": "public", 
-		 "resource-type": "Dataset", 
-		 "sourceHash": "c9dc13eac354d25bca64881c17786f11a787f29c"
-		}
-		]}
-		
-		
-		var output="<ul>";
-		for (var i in data.dataset) {
-		
-			output+="<li>"+data.dataset[i].title+"</li>"+
-					"<li>"+data.dataset[i].description+"</li>"+
-					"<li>"+data.dataset[i].keyword+"</li>"+
-					"<li>"+data.dataset[i].modified+"</li>"+
-					"<li>"+data.dataset[i].publisher.name+"</li>"+
-					"<li>"+data.dataset[i].contactPoint.fn+"</li>"+
-					"<li>"+data.dataset[i].contactPoint.hasEmail+"</li>"+
-					"<li>"+data.dataset[i].identifier+"</li>"+
-					"<li>"+data.dataset[i].bureauCode+"</li>"+
-					"<li>"+data.dataset[i].programCode+"</li>"+
-					"<li>"+data.dataset[i].landingpage+"</li>"+
-					"<li>"+data.dataset[i].accesslevelcomment+"</li>"+
-					"<li>"+data.dataset[i].programCode+"</li>"
-		}			
-		
-		output+="</ul>";
-		document.getElementById("placeholder").innerHTML=output;
-		
-		
-		function load() {
-			alert(mydata[0].title);
-		}	
-		
+
+		  	function myFunction(arr) {
+		    var out = "";
+		    var i;
+		    for(i = 0; i<arr.length; i++) {
+		        out += "<ul>"+
+		        "<li>"+arr[i].title+"</li>"+
+				"<li>"+arr[i].description+"</li>"+				
+					/* need kywd seperation */
+				"<li>"+arr[i].keyword[i]+"</li>"+					
+					/* Interior Divisons? */
+				"<li>"+arr[i].publisher.name+"</li>"+				
+					/* Full Name */
+				"<li>"+arr[i].contactPoint.fn+"</li>"+				
+					/* need email */
+				"<li>"+arr[i].contactPoint.hasEmail+"</li>"+	
+					/* Persistent? */
+				"<li>"+arr[i].identifier+"</li>"+					
+					/* See https://www.whitehouse.gov/sites/default/files/omb/assets/a11_current_year/app_c.pdf */
+				"<li>"+arr[i].bureauCode+"</li>"+					
+					/* See http://goals.performance.gov/sites/default/files/images/FederalProgramInventory_FY13_MachineReadable_091613.xls */
+				"<li>"+arr[i].programCode+"</li>"+					
+				"<li>"+'<a href="' + arr[i].url + '">' + arr[i].landingpage + '</a>'+"</li>"+ 				/*need url */
+					/* “public”, “restricted public”, “non-public” */
+				"<li>"+arr[i].accesslevelcomment+"</li>"+		
+				"</ul>"	
+		    }
+
+		    document.getElementById("id01").innerHTML = out;
+
+		};
+
 	</script>
-	
+
+	<script type="text/javascript" src="interior-edi-json-data.js"></script>
+
 </html>
 
+<!-- Might work for keyword 
 
+var items = new Array('1', '2', '3', '4', '5', '6', '7', '8', '9', '10');
+while (items.length) {
+    var ul = $('<ul>', {
+        'class': 'test'
+    });
+    for (var i = 0; i < 3; i++) {
+        if (items.length) {
+            var li = $('<li>').append(items.shift());
+            ul.append(li);
+        };
+    };
+    $('body').append(ul);
+};
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-->
