@@ -2,11 +2,136 @@
 <html>
 <head>
 	<link href="interior-edi-json.css" rel="stylesheet" type="text/css">
+		<link href="normalize.css" rel="stylesheet" type="text/css">
+	<style>
 
+	body {
+		font-family: arial;
+		font-size: 1em;
+	}
+
+	a {
+
+	}
+
+	a:active {
+
+	}
+
+	a:hover {
+
+	}
+
+	.header-flex {
+		width: 100%;
+		height: 50px;
+		background-color: rgba(200,0,0,1);
+		padding-top: 10px;
+		color: white;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			align-items: baseline;
+			align-content: flex-start;
+			position: fixed;
+			z-index: 10;
+}
+	.description {
+		height: 100%;
+		width: 45%;
+		padding-left: 10px;
+		background-color: ;
+	}
+
+	.nav {
+		height: 100%;
+		width: 50%;
+		background-color: ;
+	}
+
+	.datatable {
+		position: relative;
+		top: 60px;
+		z-index: 5;
+
+	}
+	table {
+		width: 100%;
+		font-size: 0.9em;
+
+	}
+	
+	td {
+		background-color: beige;
+		vertical-align: top;
+		padding: 10px;
+		border: 1px solid;
+		border-top: none;
+		border-left: none;
+		border-right: none;
+	}
+
+	thead {
+		width: 100%;
+		height: 30px;
+		background-color: yellow;
+
+	}
+
+	th.title { 
+		width: 20%;
+	}
+
+	th.mod {
+		width: 20px;
+	}
+
+	th.pub {
+		width: 15%;
+	}
+
+	th.desc {
+		width: 30%;
+	}
+
+	</style>
 </head>
 <body>
-<div id="id01"></div>
-<div id="id02"></div>
+
+<div class="header-flex">
+
+	<div class="description">
+		The EDI Files <br> People friendly access to U.S. Enterpirse Data Information files
+	</div>
+
+		<div class="nav">
+		<a href="index.html">Home</a> > 
+		Department of the Interior
+		</nav>
+
+		</div>
+</div>
+
+
+<div class="datatable">
+
+	<table>
+		<thead>
+			<tr>
+				<th class="title">Title</th>
+				<th class="desc">Description</th>
+				<th class="pub">Publisher</th>
+				<th class="email">Contact</th>
+				<th class="url">URL</th>
+				<th class="access">Access</th>
+				<th class="kwds">Keywords</th>
+			</tr>
+		</thead>
+		<tbody  id="id01"></tbody>
+
+</table>
+</div>
 </body>
 
 
@@ -15,29 +140,45 @@
 		  	function myFunction(arr) {
 		    var out = "";
 		    var i;
-		    for(i = 0; i<arr.length; i++) {
-		        out += "<ul>"+
-		        "<li>"+arr[i].title+"</li>"+
-				"<li>"+arr[i].description+"</li>"+				
-					/* need kywd seperation */
-				"<li>"+arr[i].keyword[i]+"</li>"+					
-					/* Interior Divisons? */
-				"<li>"+arr[i].publisher.name+"</li>"+				
-					/* Full Name */
-				"<li>"+arr[i].contactPoint.fn+"</li>"+				
-					/* need email */
-				"<li>"+arr[i].contactPoint.hasEmail+"</li>"+	
-					/* Persistent? */
-				"<li>"+arr[i].identifier+"</li>"+					
-					/* See https://www.whitehouse.gov/sites/default/files/omb/assets/a11_current_year/app_c.pdf */
-				"<li>"+arr[i].bureauCode+"</li>"+					
-					/* See http://goals.performance.gov/sites/default/files/images/FederalProgramInventory_FY13_MachineReadable_091613.xls */
-				"<li>"+arr[i].programCode+"</li>"+					
-				"<li>"+'<a href="' + arr[i].url + '">' + arr[i].landingpage + '</a>'+"</li>"+ 				/*need url */
-					/* “public”, “restricted public”, “non-public” */
-				"<li>"+arr[i].accesslevelcomment+"</li>"+		
-				"</ul>"	
-		    }
+		    var n;
+		    var s;
+		  	
+		    for(i = 0; i < arr.length; i++) {
+				      
+				       out 	+= "<tr>" +
+
+					"<td>"	+ arr[i].title + " ("
+							+ arr[i].modified + ")"
+							+ "</td>" +
+
+					"<td>" 	+ arr[i].description + "</td>" +
+
+					"<td>" 	+ arr[i].publisher.name + "</td>" +	
+
+//					"<td>" 	+ arr[i].contactPoint.fn + "</td>" +
+
+					"<td>" 	+ '<a href="' + arr[i].contactPoint.hasEmail + '">' 
+						   	+ "Email" + '</a>' + "</td>" +
+
+//					"<td>" 	+ arr[i].identifier + "</td>" +
+
+//					"<td>" 	+ arr[i].bureauCode + "</td>" + 	
+
+					"<td>" 	+'<a href="' + arr[i].landingpage 	+ '" target=_blank>' 
+							+ "Website" + '</a>' + "</td>" +
+
+					"<td>" 	+ arr[i].accessLevel 
+							+ "</td>" +
+
+					"<td>"
+	    	
+				    	for(n = 0; n < arr[i].keyword.length; n++) {
+					      		out += 
+								arr[i].keyword[n] + ", "  
+					    } 	+
+
+					"</td>"
+			}
 
 		    document.getElementById("id01").innerHTML = out;
 
@@ -46,23 +187,56 @@
 	</script>
 
 	<script type="text/javascript" src="interior-edi-json-data.js"></script>
+	<script type="text/javascript" src="jquery-1.11.0.min.js"></script>
 
 </html>
 
-<!-- Might work for keyword 
+ for(i = 0; i < arr.length; i++) {
+				      
+				       out 	+= "<ul>"+
 
-var items = new Array('1', '2', '3', '4', '5', '6', '7', '8', '9', '10');
-while (items.length) {
-    var ul = $('<ul>', {
-        'class': 'test'
-    });
-    for (var i = 0; i < 3; i++) {
-        if (items.length) {
-            var li = $('<li>').append(items.shift());
-            ul.append(li);
-        };
-    };
-    $('body').append(ul);
-};
+					"<li>"	+ "Title: " 
+						   	+ arr[i].title + "</li>" +
 
--->
+					"<li>" 	+ "Description: " 
+						   	+ arr[i].description + "</li>" +
+
+					"<li>" 	+ "Publisher: "
+						   	+ arr[i].publisher.name + "</li>" +	
+
+					"<li>" 	+ "Contact: "
+						   	+ arr[i].contactPoint.fn + "</li>" +
+
+					"<li>" 	+ "Contact Email: " 
+						   	+ '<a href="' + arr[i].contactPoint.hasEmail + '">' 
+						   	+ arr[i].contactPoint.hasEmail + '</a>' + "</li>" +
+
+					"<li>" 	+ "Identifier: " 
+					 	  	+ arr[i].identifier + "</li>" +
+
+					"<li>" 	+ "Bureau Code: " +arr[i].bureauCode + "</li>" + 	
+
+					"<li>" 	+ "Website: " +'<a href="' + arr[i].landingpage 	+ '">' 
+							+ arr[i].landingpage + '</a>' + "</li>" +
+
+					"<li>" 	+ "Access Comment: " + arr[i].accesslevelcomment 
+							+ "</li>"+			
+					
+					"</ul>"	
+	    	
+		    	for(n = 0; n < arr[i].keyword.length; n++) {
+			      		out += 
+					"<li>" 	+ arr[i].keyword[n] + "</li>"
+			    }
+
+			    for(s = 0; s < arr[i].programCode.length; s++) {
+			      		out += 
+ 					"<li>" 	+ arr[i].programCode[s] + "</li>"					
+			    }
+
+			}
+
+		    document.getElementById("id01").innerHTML = out;
+
+		};
+
