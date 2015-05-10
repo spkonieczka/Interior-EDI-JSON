@@ -148,8 +148,8 @@
 				       out 	+= "<tr>" +
 
 					"<td>"	+ arr[i].title + " ("
-							+ arr[i].modified + ")"
-							+ "</td>" +
+						+ arr[i].modified + ")"
+						+ "</td>" +
 
 					"<td>" 	+ arr[i].description + "</td>" +
 
@@ -158,24 +158,24 @@
 //					"<td>" 	+ arr[i].contactPoint.fn + "</td>" +
 
 					"<td>" 	+ '<a href="' + arr[i].contactPoint.hasEmail + '">' 
-						   	+ "Email" + '</a>' + "</td>" +
+						+ "Email" + '</a>' + "</td>" +
 
 //					"<td>" 	+ arr[i].identifier + "</td>" +
 
 //					"<td>" 	+ arr[i].bureauCode + "</td>" + 	
 
-					"<td>" 	+'<a href="' + arr[i].landingpage 	+ '" target=_blank>' 
-							+ "Website" + '</a>' + "</td>" +
+					"<td>" 	+'<a href="' + arr[i].landingpage + '" target=_blank>' 
+						+ "Website" + '</a>' + "</td>" +
 
 					"<td>" 	+ arr[i].accessLevel 
-							+ "</td>" +
+						+ "</td>" +
 
 					"<td>"
 	    	
-				    	for(n = 0; n < arr[i].keyword.length; n++) {
-					      		out += 
-								arr[i].keyword[n] + ", "  
-					    } 	+
+					    	for(n = 0; n < arr[i].keyword.length; n++) {
+						    out += 
+							arr[i].keyword[n] + ", "  
+						    } 	+
 
 					"</td>"
 			}
