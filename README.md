@@ -1,9 +1,8 @@
-# Interior-EDI-JSON
+# US-EDI-JSON
 
-A JavaScript parser for Department of Interior enterprise data inventory file.
+People friendly access to U.S. enterprise data inventory files.
 
-Primary purpose: This project is for learning to write JavaScript that parses JSON files.  
+Primary purpose: This project is for personal learning of coding database driven websites.  
 
-Seondary purpose: Project will allow for reading U.S. Department of Interoir Enterprise Data Inventory (EDI) file (http://data.doi.gov/WAF/edi.json), and other similarly formatted U.S. Federal EDI files. 
+Seondary purpose: Project will allow human readable access U.S. Enterprise Data Inventory (EDI) files. 
 
-*** Because purpose is personal learning, no contributors invited. ***
