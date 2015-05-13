@@ -1,0 +1,23 @@
+Current Build
+
+  Functionality 
+
+    * Make static tables sortable
+    * Parse/present URLs
+  
+  Presentation
+    
+    * Fix cross-browser rendering
+    * Fix table display for large screen
+    * Add mobile-friendly CSS
+    
+  General 
+  
+    * Clean HTML, CSS, JS
+    
+Future Versions
+
+  * Build database (in progress)
+  * Build database search 
+  * 
+    
