@@ -6,3 +6,12 @@ Primary purpose: This project is for personal learning of coding database driven
 
 Seondary purpose: Project will allow human readable access U.S. Enterprise Data Inventory (EDI) files. 
 
+
+------------------------------------------------------------------------------------------------
+
+TO DO LIST
+
+See TODO.txt
+
+---------------------
+    
