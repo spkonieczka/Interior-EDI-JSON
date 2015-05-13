@@ -1,0 +1,406 @@
+a {
+	text-decoration: none;
+	color: blue;
+}
+
+p {
+	line-height: 1.3em;
+	letter-spacing: 0.05em;
+}
+
+h1 {
+	font-size: 1.4em;
+}
+
+h2 {
+	font-size: 1.1em;
+}
+
+.container {
+	width: 100%;
+	height: 1500px;
+	background-color: ;
+}
+.header {
+	width: 80%;
+	height: 20%;
+	background-color: rgba(0,0,200,0.7);
+	margin: 0 auto;
+	color: white;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: baseline;
+	align-content: flex-start;
+}
+
+.header-logo {
+	width: 90%;
+	height: 33%;
+	background-color: rgba(255,255,255,0.7);
+	color: black;
+	margin-top: 10%;
+	border-radius: 10px;
+	margin: 0 auto;
+	position: relative;
+	top: 10%;
+	line-height: 55px;
+	text-align: center;
+	padding-top: 10%;
+
+}
+
+ul {
+	list-style-type: none;
+	font-size: 0.8em;
+	padding-left: 1%;
+	line-height: 20px;
+	letter-spacing: 0.02em;
+}
+
+ul.bullets {
+	list-style-type: circle;
+	font-size: 1em;
+	padding-left: 10%;
+	line-height: 20px;
+}
+
+li.topspace {
+	margin-top: 15px;
+}
+
+li.no-data {
+	color: red;
+}
+
+li.bad-data {
+	color: balck
+}
+
+
+span.title-small-logo {
+	font-family: arial black;
+	height: 15%;
+	font-size: 4em;
+	letter-spacing: 0.02em;
+	padding-left: 1%;
+	padding-bottom: ;
+	background-color: ;
+}
+
+span.title-large-logo {
+	font-family: arial black;
+	height: 50%;
+	font-size: 7em;
+	padding: 0.5%;
+	line-height: ;
+	background-color: ;
+
+}
+
+span.title-small-logo-bttm {
+	font-family: arial black;
+	height: 15%;
+	font-size: 4em;
+	letter-spacing: 0.02em;
+	line-height: ;
+	background-color: ;
+
+
+}
+
+.header-name {
+	width: 50%;
+	height: 25%;
+	margin-left: 5%;
+	position: relative;
+	top: 7%;
+	margin: ;
+	text-align: center;
+	line-height: 1.7em;
+}
+
+span.title-small-name {
+	height: 5%;
+	font-size: 1em;
+	letter-spacing: 0.09em;
+	position: relative;
+	background-color: ;
+
+}
+
+span.title-large-name {
+	height: 10%;
+	font-size: 2em;
+	letter-spacing: 0.03em;
+	background-color: ;
+	line-height: 50px;
+
+}
+
+span.title-small-name-bttm {
+	height: 5%;
+	font-size: 1em;
+	letter-spacing: 0.09em;
+	background-color: ;
+}
+
+.sponsor-logo {
+	width: 45%;
+	height: 15%;
+	position: relative;
+	top: 17%;
+	left: 1%;
+	background-image: url("colloquiumlogo3.png");
+	background-size: 60%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-origin: 
+}
+
+.sponsor-tag {
+	width: 40%;
+	height: 10%;
+	position: relative;
+	top: -1%;
+	left: 58%;
+	text-align: center;
+	line-height: 23px;
+	padding-top: 2%;
+	letter-spacing: 0.05em;
+
+}
+
+span.strong {
+	font-weight: bold;
+}
+
+.home-description {
+	width: 76%;
+	height: auto;
+	background-color: rgba(200,0,0,0.8);
+	margin: 0 auto;
+	padding: 2%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: baseline;
+	align-content: flex-start;	
+}
+
+.home-description-main {
+	width: 60%;
+	height: 100%;
+	margin-right: 3%;
+	background-color: yellow;
+	border-radius: 10px;
+	background-color: rgba(255,255,255,0.8);
+	padding: 2%;
+}
+
+.home-description-headline {
+	width: 27%;
+	height: 100%;
+	background-color: green;
+	border-radius: 10px;
+	background-color: rgba(255,255,255,0.8);
+	padding: 1%;
+	margin-right: 2%;
+}
+
+.nav-header {
+	width: 80%;
+	height: 90px;
+	background-color: rgba(0,0,220,0.75);
+	margin: 0 auto;
+	text-align: center;
+	color: white;
+	letter-spacing: 0.1em;
+	padding-top: 10px;
+}
+
+
+.home-nav-flex {
+	width: 77.5%;
+	height: 310px;
+	background-color: rgba(200,0,0,0.8);
+	padding-left: 2.5%;
+	padding-top: 5%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: baseline;
+	align-content: flex-start;
+	margin: 0 auto;
+}
+
+.home-nave-col {
+	width: 27%;
+	height: 84%;
+	background-color: rgba(255,255,255,0.8);
+	border-radius: 10px;
+	padding: 1%;
+	margin-right: 4.25%;
+
+}
+
+.misc-header {
+	width: 80%;
+	height: 110px;
+	background-color: rgba(0,0,220,0.75);
+	margin: 0 auto;
+	text-align: center;
+	font-size: 2em;
+	color: white;
+	letter-spacing: 0.1em;
+	padding-top: 10px;
+
+}
+
+
+.project-info {
+	width: 76%;
+	height: auto;
+	background-color: rgba(200,0,0,0.8);
+	margin: 0 auto;
+	padding: 2%;
+	padding-top: 5%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: baseline;
+	align-content: flex-start;	
+}
+
+.releasebox {
+	width: 60%;
+	height: 100%;
+	border-radius: 10px;
+	background-color: rgba(255,255,255,0.8);
+	padding: 1%;
+}
+
+footer {
+	width: 70%;
+	height: 200px;
+	margin: 0 auto;
+	background-color: blue;
+	padding: 5%;
+	letter-spacing: 0.15em;
+	line-height: 20px;
+	color: white;
+
+
+}
+
+
+/* DATA TABLES HEADER */
+
+	.flex {
+		width: 100%;
+		height: 50px;
+		padding-top: 1%;
+		padding-bottom: 1%;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: baseline;
+		align-content: space-around;
+		position: fixed;
+		z-index: 10;
+		background-color: white;
+		line-height: 25px;
+		border: 1px solid;
+		border-top: none;
+		border-left: none;
+		border-right: none;
+		font-size: 0.8em;
+	}
+
+	.description {
+		height: 100%;
+		width: 40%;
+		padding-left: 10px;
+		color: red;
+	}
+
+	.colloquium-sponsor {
+		height: 100%;
+		width: 25%;
+		padding-top: ;
+		text-align: center;
+	}
+
+	.colloquium-logo {
+		height: 100%;
+		width: 25%;
+		padding-bottom: 2%;
+		background-image: url("colloquiumlogo3.png");
+		background-size: 90%;
+		background-repeat: no-repeat;
+	}
+
+/* DATA TABLES */
+
+	.datatable {
+		position: relative;
+		top: 70px;
+		z-index: 5;
+	}
+
+	table {
+		width: 100%;
+		font-size: 0.9em;
+	}
+	
+	tbody {
+		background-color: beige;
+	}
+
+	td {
+		vertical-align: top;
+		border: 1px solid;
+		border-left: none;
+		border-right: none;
+	}
+
+	.padding {
+		padding: 1%;
+		width: 10%;
+	}
+
+	.small-cell {
+		width: 5%;
+	}
+
+	.med-cell {
+		width: 20%;
+	}
+
+	.large-cell {
+		width: 30%;
+	}
+
+	thead {
+		width: 100%;
+		height: 30px;
+		background-color: yellow;
+	}
+
+	
+
+
+
+
+
+
+
+
+
