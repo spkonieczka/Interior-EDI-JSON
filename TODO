@@ -7,6 +7,7 @@ Current Build
   
   Presentation
     
+    * Alter "unspaced strings"
     * Fix cross-browser rendering
     * Fix table display for large screen
     * Add mobile-friendly CSS
